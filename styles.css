@@ -1,0 +1,243 @@
+/*Universal Styles*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p, a {
+    font-family: "Helvetica", "sans-serif";
+    color: hsl(33, 0%, 20%);
+  }
+  
+  a {
+    font-family: "Century Gothic";
+  }
+  
+  /*Header Styles*/
+  nav {
+    height: 70px;
+    background-color: hsl(33, 100%, 65%);
+    display: grid;
+    grid-template-columns: 130px auto;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    color: hsl(33, 0%, 20%);
+  }
+  
+  nav img {
+    height: 70px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: hsl(33, 0%, 20%);;
+  }
+  
+  .logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+    align-self: center;
+    margin-left: 60px;
+  }
+  
+  .logo span {
+    vertical-align: super;
+    font-size: 0.5em;
+  }
+  
+  nav ul {
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+    justify-self: end;
+    align-self: center;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  
+  nav li {
+    display: inline;
+    padding: auto 10px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    border-right: solid 1.3px black;
+    padding-right: 0.4em;
+  }
+  
+  nav li:last-child {
+    border-right: none;
+  }
+  
+  /* Mobile*/
+    @media screen and (max-width: 500px) {
+      nav {
+        grid-template-columns: auto;
+        grid-template-rows: 60px 30px;
+        height: auto;
+      }
+  
+      nav img {
+        justify-self: center;
+        margin-right: 70px;
+        height: 60px;
+      }
+  
+      .logo {
+        grid-column: 1 / 1;
+        grid-row: 1 / 2;
+        justify-self: center;
+      }
+  
+      nav ul {
+        grid-column: 1 / 1;
+        grid-row: 2 / 2;
+        justify-self: center;
+        margin-right: 0;
+      }
+    }
+  
+    /*Main Styles*/
+    /*Hero Section*/
+    .hero {
+      padding-top: 170px;
+      padding-bottom: 120px;
+      height: auto;
+      background-color: hsl(34, 100%, 80%);
+      color: hsl(33, 0%, 20%);
+      text-align: center;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      border: 1.5px solid hsl(33, 100%, 65%);
+    }
+  
+    .hero h1 {
+      font-family: sans-serif;
+      text-transform: uppercase;
+    }
+  
+    .hero div {
+      grid-column: 1 / 2;
+      grid-row: 1 / 1;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+    }
+  
+    .heroText1 {
+      font-size: 1.8em;
+      font-weight: 700;
+      writing-mode: vertical-lr;
+      margin-bottom: -100px;
+      cursor: default;
+    }
+  
+    .heroText2 {
+      font-size: 7.5em;
+      margin-bottom: -100px;
+      cursor: default;
+    }
+  
+    .heroText3 {
+      grid-column: 1 / 2;
+      grid-row: 2 / 2;
+      align-self: start;
+      font-size: 4em;
+      cursor: default;
+    }
+  
+  /*About Section*/
+  .about {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+  
+  .sectionHeader-About {
+    grid-row: 1 / 2;
+    background-color: hsl(33, 100%, 65%);
+    padding: 20px 60px;
+  }
+  
+  .sectionContent-About {
+      grid-row: 2 / 2;
+      justify-self: center;
+      padding: 30px 60px;
+      text-align: justify;
+      border: 1.5px solid hsl(33, 100%, 65%);
+    }
+  
+    @media screen and (max-width: 500px) {
+      .sectionHeader-About {
+        padding: 20px 30px;
+      }
+  
+      .sectionContent-About {
+        padding: 30px 30px;
+      }
+    }
+  
+  /*Team Section*/
+  
+  .team {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+  
+  .team img {
+    max-height: 250px;
+    border-radius: 20px;
+    border: 2px solid hsl(33, 100%, 65%);
+  }
+  
+  .sectionHeader-Team {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: hsl(33, 100%, 65%);
+    padding: 20px 60px;
+  }
+  
+  .sectionContent-Team {
+      grid-row: 2 / 2;
+      justify-self: center;
+      text-align: justify;
+      border: 1.5px solid hsl(33, 100%, 65%);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      min-height: 300px;
+      padding: 25px 25px;
+    }
+  
+    .teamMember {
+      background-color: hsl(33, 100%, 65%);
+      border-radius: 20px;
+      text-align: center;
+    }
+  
+    .teamMember p{
+      padding-bottom: 15px;
+    }
+  
+    @media screen and (max-width: 850px) {
+      .sectionContent-Team {
+        flex-direction: column;
+        gap: 25px;
+      }
+  
+      .team img {
+        width: 100%;
+        max-height: 500px;
+      }
+    }
+  
+  footer {
+    min-height: 200px;
+    background-color: hsl(33, 100%, 65%);
+    padding: 20px 60px;
+  }
